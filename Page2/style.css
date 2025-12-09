@@ -1,0 +1,218 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 0px 0;
+  position: relative;
+}
+
+.header-title {
+  font-size: 45px;
+  font-weight: 600;
+  color: #0f3b97;
+}
+
+/* MAIN WRAPPER */
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  width: 75%;
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  background-image: url("../Bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 30px;
+  box-shadow: 0px 4px 18px rgba(0,0,0,0.2);
+  color: white;
+}
+
+/* LEFT SIDE → ACCORDIONS */
+.left {
+  width: 50%;
+  padding: 10px 40px;
+  margin-top: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-item input {
+  display: none;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+}
+
+/* Expand Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+  padding-left: 5px;
+}
+
+.accordion-item input:checked ~ .accordion-content {
+  max-height: 450px;
+  margin-top: 10px;
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accordion-content li {
+  padding: 6px 0;
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE PANEL */
+.right {
+  width: 50%;
+  background: white;
+  border-radius: 15px;
+  padding: 10px 40px;
+  margin-left: 20px;
+  color: black;
+}
+
+.form-desc {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Captcha */
+.captcha-box {
+  width: 50%;
+  height: 60px;
+  background: #eaecef;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* Inputs (Copied from your final CSS) */
+label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input {
+  width: 40%;
+  padding: 14px;
+  background: #eaecef;
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  height: 48px;
+}
+
+select.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+}
+
+/* Checkbox Row */
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.checkbox-row input {
+  margin-right: 10px;
+}
+
+.checkbox-row a {
+  color: #1063de;
+  text-decoration: none;
+}
+
+.checkbox-row a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON → Same styling as login-btn */
+.start-btn {
+  width: 200px;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 35px;
+  border: 2px solid white;
+  transition: 0.3s;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ❌ Disabled state */
+.start-btn.inactive {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.4);
+  pointer-events: none;       /* << THIS disables clicking */
+  cursor: not-allowed;
+}
+
+/* ✅ Active state */
+.start-btn.active-btn {
+  background: #153b9b;
+  border-color: #ffffff;
+  color: white;
+  cursor: pointer;
+}
+
+.start-btn.active-btn:hover {
+  transform: scale(1.05);
+}

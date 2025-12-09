@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Client Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="header-title">New Client Registration</h1>
+</header>
+
+<section class="wrapper">
+    <div class="content-box">
+
+        <!-- LEFT SIDE -->
+        <div class="left">
+
+            <!-- ACCORDION 1 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="acc1">
+                <label class="accordion-title" for="acc1">
+                    Steps For Online KYC
+                    <span class="arrow"></span>
+                </label>
+
+                <div class="accordion-content">
+                    <ul>
+                        <li>Mobile verification</li>
+                        <li>Email verification</li>
+                        <li>Pan verification</li>
+                        <li>Aadhar verification</li>
+                        <li>Bank account verification</li>
+                        <li>Add other details</li>
+                        <li>Upload images</li>
+                        <li>Generate and eSign KYC Form</li>
+                        <li>Submit request</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ACCORDION 2 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="acc2">
+                <label class="accordion-title" for="acc2">
+                    Ways To Register With Us.
+                    <span class="arrow"></span>
+                </label>
+
+                <div class="accordion-content">
+                    <ul>
+                        <li>Call us we will guide you to register.</li>
+                        <li>Download the KYC Form from our website and courier it.</li>
+                        <li>Fill form online and e-sign with NSDL.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ACCORDION 3 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="acc3">
+                <label class="accordion-title" for="acc3">
+                    Keep These Things Ready
+                    <span class="arrow"></span>
+                </label>
+
+                <div class="accordion-content">
+                    <ul>
+                        <li>Your Mobile</li>
+                        <li>Your Email</li>
+                        <li>Your Bank account details</li>
+                        <li>Your Pan card scanned copy (JPG)</li>
+                        <li>Your Aadhar card scanned copy (JPG)</li>
+                        <li>Your scanned picture (JPG)</li>
+                        <li>Your scanned signature (JPG)</li>
+                        <li>To fill up form Online click the link below.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+
+            <p class="form-desc">
+                To fill up the form online, click the link below.  
+                The page will guide you through the rest of the process.
+            </p>
+
+            <div class="captcha-box">
+                Captcha
+            </div>
+
+            <label class="label">Enter Captcha Text</label>
+            <input type="text" class="input" placeholder="Enter Captcha">
+
+            <label class="checkbox-row">
+                <input  type="checkbox" id="agree" onclick="toggleButton()">
+                <span>
+                    I wish to open an online demat & trading account and I acknowledge and accept all 
+                    <a href="#">Terms and conditions</a>
+                    outlined in the Demat & Trading Account Agreement.
+                </span>
+            </label>
+
+<a href="../Page3/Page3.html" id="startBtn" class="start-btn inactive">Start Process</a>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+  function toggleButton() {
+    const checkbox = document.getElementById("agree");
+    const btn = document.getElementById("startBtn");
+
+    if (checkbox.checked) {
+      btn.classList.remove("inactive");
+      btn.classList.add("active-btn");
+    } else {
+      btn.classList.remove("active-btn");
+      btn.classList.add("inactive");
+    }
+  }
+</script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 3 | Mobile Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="../logo.png" class="logo" alt="">
+    <h1 class="header-title">Mobile Verification</h1>
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <div class="wrapper">
+    <div class="content-box">
+
+      <!-- LEFT SIDE (NOW THE INSTRUCTIONS) -->
+      <div class="left">
+        <h2 class="login-text">Instructions</h2>
+
+        <ul class="steps">
+          <li>Enter your mobile no and Click <b>Send OTP</b></li>
+          <li>You will receive an OTP on your mobile</li>
+          <li>Specify the OTP and Click verify</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SIDE (NOW THE FORM AREA) -->
+      <div class="right">
+
+        <h2 class="left-title">Signup Now</h2>
+        <p class="left-text">Or track your existing application.</p>
+
+        <label>Mobile Number</label>
+        <input type="text" placeholder="Enter mobile number" class="input">
+
+        <button class="login-btn" onclick="showOTP()">Send OTP</button>
+
+        <!-- OTP SECTION -->
+        <div id="otpSection" class="otp-box">
+          <label>Enter OTP</label>
+          <input type="text" class="input" placeholder="Enter the OTP">
+
+          <button class="login-btn">Verify & Proceed</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function showOTP() {
+      document.getElementById("otpSection").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
