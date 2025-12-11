@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="../logo.png" class="logo" alt="">
+        <h1 class="header-title">Email Verification</h1>
+    </div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="wrapper">
+        <div class="content-box">
+
+            <!-- LEFT PANEL -->
+            <div class="left">
+                <h2 class="login-text">Instructions</h2>
+
+                <ul class="steps">
+                    <li>Enter your Email and Click <b>Send OTP</b></li>
+                    <li>You will receive an OTP on your Email</li>
+                    <li>Specify the OTP and Click verify</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <div class="right">
+
+                <h2 class="left-title">Email Verification</h2>
+                <p class="left-text">Please enter your email to continue.</p>
+
+                <label>Email</label>
+                <input type="email" class="input" id="emailInput" placeholder="Enter Email">
+
+                <button class="login-btn" id="sendBtn" onclick="showEmailOTP()">Send OTP</button>
+
+                <!-- OTP Section (hidden initially) -->
+                <div id="emailOtpSection" class="otp-box">
+                    <label>Enter OTP</label>
+                    <input type="text" class="input" placeholder="Enter the OTP">
+
+                    <button class="login-btn">Verify & Proceed</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showEmailOTP() {
+            const otpBox = document.getElementById("emailOtpSection");
+            const sendBtn = document.getElementById("sendBtn");
+
+            // Show OTP input & verify button
+            otpBox.style.display = "block";
+
+            // Change "Send OTP" → "Resend OTP"
+            sendBtn.textContent = "Resend OTP";
+        }
+    </script>
+
+</body>
+</html>
