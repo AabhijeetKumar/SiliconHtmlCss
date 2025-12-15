@@ -36,7 +36,7 @@ body {
   border-radius: 15px;
   display: flex;
   overflow: hidden;
-  background-image: url("../Bg2.jpg");
+  background-image: url("./Bg2.jpg");
   background-size: cover;
   background-position: center;
   padding: 20px;
