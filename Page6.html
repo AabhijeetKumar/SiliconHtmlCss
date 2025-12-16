@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>PAN Validation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- HEADER -->
     <div class="header">
-        <img src="../logo.png" class="logo" alt="">
-        <h1 class="header-title">PAN Validation</h1>
+      <img src="../logo.png" class="logo" alt="" />
+      <h1 class="header-title">PAN Validation</h1>
     </div>
 
     <!-- MAIN WRAPPER -->
     <div class="wrapper">
-        <div class="content-box">
+      <div class="content-box">
+        <!-- LEFT PANEL -->
+        <div class="left">
+          <h2 class="login-text">Instructions</h2>
 
-            <!-- LEFT PANEL -->
-            <div class="left">
-                <h2 class="login-text">Instructions</h2>
-
-                <ul class="steps">
-                    <li>Enter your PAN number</li>
-                    <li>Click <b>Validate</b></li>
-                </ul>
-            </div>
-
-            <!-- RIGHT PANEL -->
-            <div class="right">
-
-                <h2 class="left-title">PAN Verification</h2>
-                <p class="left-text">Please enter your PAN number to continue.</p>
-
-                <label>PAN Number</label>
-                <input type="text" class="input" placeholder="Enter PAN Number">
-
-                <button class="login-btn">Validate</button>
-
-            </div>
-
+          <ul class="steps">
+            <li>Enter your PAN number</li>
+            <li>Click <b>Validate</b></li>
+          </ul>
         </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+          <h2 class="left-title">PAN Verification</h2>
+          <p class="left-text">Please enter your PAN number to continue.</p>
+
+          <label>PAN Number</label>
+          <input
+            type="text"
+            class="input"
+            placeholder="Enter PAN Number"
+            id="panInput"
+          />
+
+          <!-- Status message -->
+          <p
+            id="panStatus"
+            style="display: none; color: green; margin-top: 15px"
+          >
+            ✔ PAN Validated Successfully
+          </p>
+
+          <button class="login-btn" id="panBtn" onclick="validatePAN()">
+            Validate
+          </button>
+        </div>
+      </div>
     </div>
 
-</body>
+    <script>
+function validatePAN() {
+    const status = document.getElementById("panStatus");
+    const btn = document.getElementById("panBtn");
+
+    // Show tick message
+    status.style.display = "block";
+
+    // Change button text
+    btn.textContent = "Proceed";
+
+    // Change click behavior → redirect
+    btn.onclick = function () {
+        window.location.href = "./Page7.html";
+    };
+}
+</script>
+
+  </body>
 </html>
