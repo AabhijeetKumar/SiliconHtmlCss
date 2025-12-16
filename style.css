@@ -129,3 +129,57 @@ label {
   display: none;
   margin-top: 30px;
 }
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 980px) {
+
+  .header-title {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .logo {
+    left: 20px;
+    top: 15px;
+    height: 32px;
+  }
+
+  .content-box {
+    flex-direction: column;   /* STACK LEFT & RIGHT */
+    width: 95%;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: 90%;
+    margin: 0;
+  }
+
+  .left {
+    margin-bottom: 20px;
+  }
+
+  .right {
+    padding: 40px;
+  }
+
+  .left-title,
+  .login-text {
+    font-size: 24px;
+  }
+
+  .left-text {
+    font-size: 16px;
+  }
+
+  .steps li {
+    font-size: 15px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
