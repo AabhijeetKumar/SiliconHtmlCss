@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="../logo.png" class="logo" alt="">
+  <h1 class="header-title">Bank Validation</h1>
+</div>
+
+<!-- MAIN WRAPPER -->
+<div class="wrapper">
+  <div class="content-box">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+      <h2 class="login-text">Instructions</h2>
+
+      <ul class="steps">
+        <li>Enter your Bank IFSC and Account Number</li>
+        <li>Click on <b>Validate</b></li>
+        <li>On successful validation you will be able to add other bank details</li>
+        <li>Specify the details and click <b>Proceed</b></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+
+      <h2 class="left-title">Bank Verification</h2>
+      <p class="left-text">Please enter your bank details to continue.</p>
+
+      <!-- BASIC DETAILS -->
+      <label>Account Number</label>
+      <input type="text" class="input" id="accountNo" placeholder="Enter Account Number">
+
+      <label>IFSC Code</label>
+      <input type="text" class="input" id="ifsc" placeholder="Enter IFSC Code">
+
+      <button class="login-btn" id="validateBtn" onclick="validateBank()">Validate</button>
+
+      <!-- EXTRA DETAILS (DISABLED INITIALLY) -->
+      <div id="bankDetails" style="display:none; margin-top:20px;">
+
+        <label>Bank Name</label>
+        <input type="text" class="input" >
+
+        <label>MICR Code</label>
+        <input type="text" class="input" >
+
+        <label>Address</label>
+        <input type="text" class="input" >
+
+        <label>City</label>
+        <input type="text" class="input" >
+
+        <label>PIN Code</label>
+        <input type="text" class="input" >
+
+        <label>Account Type</label>
+        <select class="input" >
+          <option value="">Select Account Type</option>
+          <option>Savings</option>
+          <option>Current</option>
+        </select>
+
+        <button class="login-btn" style="margin-top:25px;">
+          Verify & Proceed
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function validateBank() {
+    const validateBtn = document.getElementById("validateBtn");
+    const bankDetails = document.getElementById("bankDetails");
+
+    // Hide validate button
+    validateBtn.style.display = "none";
+
+    // Show bank details
+    bankDetails.style.display = "block";
+  }
+</script>
+
+</body>
+</html>
