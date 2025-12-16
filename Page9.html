@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PAGE-SPECIFIC style -->
+    <style>
+      .full-width {
+        width: 90%;
+        background: white;
+        color: black;
+        border-radius: 15px;
+        padding: 20px 20px;
+      }
+
+      .section {
+        margin-bottom: 35px;
+      }
+
+      .section h3 {
+        margin-bottom: 15px;
+        color: #153b9b;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .grid-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .checkbox-group label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: normal;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 980px) {
+        .grid-3,
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <img src="../logo.png" class="logo" alt="" />
+      <h1 class="header-title">Personal Information</h1>
+    </div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="wrapper">
+      <div class="content-box">
+        <!-- FULL WIDTH FORM -->
+        <div class="full-width">
+          <!-- NAME -->
+          <div class="section">
+            <h3>Name</h3>
+            <div class="grid-3">
+              <input class="input" placeholder="First Name" />
+              <input class="input" placeholder="Middle Name" />
+              <input class="input" placeholder="Last Name" />
+            </div>
+          </div>
+
+          <!-- PARENTS -->
+          <div class="section">
+            <h3>Father / Spouse & Mother</h3>
+            <div class="grid-2">
+              <input class="input" placeholder="Father / Spouse Name" />
+              <input class="input" placeholder="Mother Name" />
+            </div>
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="section">
+            <h3>Address</h3>
+            <div class="grid-3">
+              <input class="input" placeholder="Address Line 1" />
+              <input class="input" placeholder="Address Line 2" />
+              <input class="input" placeholder="Address Line 3" />
+            </div>
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="City" />
+              <input class="input" placeholder="PIN Code" />
+              <select class="input">
+                <option value="">Select State</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+
+                <!-- Union Territories -->
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                <option>Delhi</option>
+                <option>Jammu and Kashmir</option>
+                <option>Ladakh</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- NOMINEE OPT -->
+          <div class="section checkbox-group">
+            <label>
+              <input type="checkbox" />
+              I do not wish to opt for Nominee
+            </label>
+            <small
+              >* In case of minor, phone & address will be considered guardian’s
+              details</small
+            >
+          </div>
+
+          <!-- NOMINEE -->
+          <div class="section">
+            <h3>Nominee 1</h3>
+
+            <div class="grid-3">
+              <input class="input" placeholder="Nominee Name" />
+              <select class="input">
+                <option>Select Relationship</option>
+                <option>Father</option>
+                <option>Mother</option>
+                <option>Spouse</option>
+                <option>Son</option>
+                <option>Daughter</option>
+              </select>
+              <input type="date" class="input" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <select class="input">
+                <option>Is Minor</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <input class="input" placeholder="Guardian Name" />
+              <input class="input" placeholder="PAN Number" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="Mobile Number" />
+              <input class="input" placeholder="Email" />
+              <input class="input" placeholder="Share %" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="Address" />
+              <input class="input" placeholder="City" />
+              <input class="input" placeholder="PIN" />
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Nominee 2</h3>
+
+            <div class="grid-3">
+              <input class="input" placeholder="Nominee Name" />
+              <select class="input">
+                <option>Select Relationship</option>
+                <option>Father</option>
+                <option>Mother</option>
+                <option>Spouse</option>
+                <option>Son</option>
+                <option>Daughter</option>
+              </select>
+              <input type="date" class="input" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <select class="input">
+                <option>Is Minor</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <input class="input" placeholder="Guardian Name" />
+              <input class="input" placeholder="PAN Number" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="Mobile Number" />
+              <input class="input" placeholder="Email" />
+              <input class="input" placeholder="Share %" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="Address" />
+              <input class="input" placeholder="City" />
+              <input class="input" placeholder="PIN" />
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Nominee 3</h3>
+
+            <div class="grid-3">
+              <input class="input" placeholder="Nominee Name" />
+              <select class="input">
+                <option>Select Relationship</option>
+                <option>Father</option>
+                <option>Mother</option>
+                <option>Spouse</option>
+                <option>Son</option>
+                <option>Daughter</option>
+              </select>
+              <input type="date" class="input" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <select class="input">
+                <option>Is Minor</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <input class="input" placeholder="Guardian Name" />
+              <input class="input" placeholder="PAN Number" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="Mobile Number" />
+              <input class="input" placeholder="Email" />
+              <input class="input" placeholder="Share %" />
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <input class="input" placeholder="Address" />
+              <input class="input" placeholder="City" />
+              <input class="input" placeholder="PIN" />
+            </div>
+          </div>
+
+          <!-- MARITAL / OCCUPATION -->
+          <div class="section">
+            <h3>Other Details</h3>
+            <div class="grid-3">
+              <select class="input">
+                <option>Marital Status</option>
+                <option>Single</option>
+                <option>Married</option>
+                <option>Widowed</option>
+                <option>Divorced</option>
+                <option>Separated</option>
+              </select>
+
+              <select class="input">
+                <option>Occupation</option>
+                <option>Salaried</option>
+                <option>Business</option>
+                <option>Professional</option>
+                <option>Student</option>
+              </select>
+
+              <select class="input">
+                <option>Education</option>
+                <option>Graduate</option>
+                <option>Post Graduate</option>
+                <option>Doctorate</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CATEGORY / INCOME -->
+          <div class="section">
+            <div class="grid-3">
+              <select class="input">
+                <option>Category</option>
+                <option>General</option>
+                <option>OBC</option>
+                <option>SC</option>
+                <option>ST</option>
+              </select>
+
+              <select class="input">
+                <option>Income</option>
+                <option>Below 1 Lakh</option>
+                <option>1–5 Lakh</option>
+                <option>Above 5 Lakh</option>
+              </select>
+
+              <label class="checkbox-group">
+                <input type="checkbox" /> Politically Exposed
+              </label>
+            </div>
+          </div>
+
+          <!-- EXCHANGE / DP SUBSCRIPTION -->
+          <div class="section">
+            <h3>Exchange / DP Subscription</h3>
+
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" /> National Stock Exchange (Capital
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> Bombay Stock Exchange (Capital
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> National Stock Exchange (SLB
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> National Stock Exchange (OFS
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> National Stock Exchange (Derivative
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> Bombay Stock Exchange (Derivative
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> MCX India Limited (Commodity
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> National Stock Exchange (Currency
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> BSE Commodity and Derivatives
+                Exchange</label
+              >
+              <label
+                ><input type="checkbox" /> National Commodity Exchange</label
+              >
+              <label
+                ><input type="checkbox" /> NSE Commodity and Derivatives
+                Exchange</label
+              >
+              <label
+                ><input type="checkbox" /> Bombay Stock Exchange (Currency
+                Market)</label
+              >
+              <label
+                ><input type="checkbox" /> Central Depository Services
+                Limited</label
+              >
+              <label
+                ><input type="checkbox" /> National Securities Depository
+                Limited</label
+              >
+            </div>
+          </div>
+
+          <!-- DEMAT ACCOUNT DETAILS -->
+          <div class="section">
+            <h3>Demat Account Details</h3>
+
+            <div class="grid-3">
+              <select class="input">
+                <option>Select Depository</option>
+                <option>NSDL</option>
+                <option>CDSL</option>
+              </select>
+
+              <input class="input" placeholder="DP ID" />
+              <input class="input" placeholder="Client ID" />
+            </div>
+
+            <div class="grid-1" style="margin-top: 15px">
+              <input class="input" placeholder="DP Name" />
+            </div>
+          </div>
+
+          <!-- DECLARATION -->
+          <div class="section">
+            <h3>Declaration</h3>
+
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" /> I/We authorize automatic credit of
+                securities</label
+              >
+              <label
+                ><input type="checkbox" /> Account opened through Power of
+                Attorney (POA)</label
+              >
+              <label
+                ><input type="checkbox" /> Account opened through DDPI</label
+              >
+              <label><input type="checkbox" /> Auto Pledge</label>
+              <label
+                ><input type="checkbox" /> Receive annual reports in physical
+                form</label
+              >
+              <label><input type="checkbox" /> Receive SMS Alerts</label>
+            </div>
+
+            <div class="grid-3" style="margin-top: 15px">
+              <select class="input">
+                <option>Receive Statement of Account</option>
+                <option>Electronic Form</option>
+                <option>Physical Form</option>
+              </select>
+
+              <select class="input">
+                <option>Receive Standard Document</option>
+                <option>Electronic Form</option>
+                <option>Physical Form</option>
+              </select>
+
+              <select class="input">
+                <option>Mobile belongs to</option>
+                <option>Self</option>
+                <option>Spouse</option>
+                <option>Guardian</option>
+              </select>
+            </div>
+
+            <div class="checkbox-group" style="margin-top: 15px">
+              <label><input type="checkbox" /> I wish to avail BSDA</label>
+              <label
+                ><input type="checkbox" /> Accept all pledge instructions
+                without further information</label
+              >
+              <label><input type="checkbox" /> Receive DIS Booklet</label>
+            </div>
+
+            <div class="grid-2" style="margin-top: 15px">
+              <input class="input" placeholder="UPI ID" />
+            </div>
+          </div>
+
+          <!-- PROCEED -->
+           <a href="./Page10.html">
+          <button class="login-btn">Proceed</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
