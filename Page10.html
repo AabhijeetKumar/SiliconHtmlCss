@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Upload</title>
+
+    <!-- MAIN GLOBAL CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PAGE-SPECIFIC CSS -->
+    <style>
+      /* Document Upload Page Only */
+
+      .upload-row {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+      }
+
+      .upload-left {
+        width: 50%;
+      }
+
+      .upload-info {
+        width: 40%;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+      }
+      
+      .login-btn {
+        width: 30%;
+        margin-top: 25px;
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        background: #153b9b;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 980px) {
+        .upload-row {
+          flex-direction: column;
+        }
+
+        .upload-left,
+        .upload-info {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <img src="../logo.png" class="logo" alt="" />
+      <h1 class="header-title">Document Upload</h1>
+    </div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="wrapper">
+      <div class="content-box">
+        <div class="right" style="width: 100%">
+          <!-- UPLOAD PHOTO -->
+          <div class="upload-row">
+            <div class="upload-left">
+              <label>Upload Photo</label>
+              <button class="login-btn">Capture</button>
+            </div>
+            <div class="upload-info">
+              Capture a photo using your PC webcam or mobile via link.<br />
+              jpeg, max size 200kb
+            </div>
+          </div>
+
+          <!-- SIGNATURE -->
+          <div class="upload-row">
+            <div class="upload-left">
+              <label>Upload Signature</label>
+              <input type="file" class="input" />
+              <button class="login-btn">Upload</button>
+            </div>
+            <div class="upload-info">
+              File type should be jpeg. max size 150kb
+            </div>
+          </div>
+
+          <!-- AADHAAR -->
+          <div class="upload-row">
+            <div class="upload-left">
+              <label>Upload Aadhaar</label>
+              <input type="file" class="input" />
+              <button class="login-btn">Upload</button>
+            </div>
+            <div class="upload-info">
+              Upload photo of your self signed Aadhaar card.<br />
+              File type should be jpeg. max size 150kb
+            </div>
+          </div>
+
+          <!-- PAN -->
+          <div class="upload-row">
+            <div class="upload-left">
+              <label>Upload PAN</label>
+              <input type="file" class="input" />
+              <button class="login-btn">Upload</button>
+            </div>
+            <div class="upload-info">
+              Upload photo of your self signed PAN card.<br />
+              File type should be jpeg. max size 150kb
+            </div>
+          </div>
+
+          <!-- DP PROOF -->
+          <div class="upload-row">
+            <div class="upload-left">
+              <label>Upload DP Proof</label>
+              <input type="file" class="input" />
+              <button class="login-btn">Upload</button>
+            </div>
+            <div class="upload-info">
+              Upload photo of your DP details proof.<br />
+              File type should be jpeg. max size 150kb
+            </div>
+          </div>
+
+          <!-- PROCEED -->
+          <button class="login-btn" style="margin-top: 30px">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
